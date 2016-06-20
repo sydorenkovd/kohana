@@ -1,14 +1,19 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Welcome extends Controller {
-
+class Controller_Welcome extends Controller_Template {
+public $template = 'main';
 	public function action_index()
 	{
-        $data = [
-          'name' => 'Viktor',
-            'age' => 22
-        ];
-        $this->response->body(View::factory('welcome', $data));
+        $content = View::factory('welcome');
+
+        // Передаем данные в шаблон welcome.php
+        $content->age = 'больше 18';
+        $content->name = 'Васька';
+
+        // Передаем данные в шаблон по умолчанию - main.php
+        $this->template->title = 'tamplate main';
+        $this->template->description = 'Учимся передавать данные в шаблоны';
+        $this->template->content = $content;
     }
 
     public function action_my(){
