@@ -127,9 +127,10 @@ Kohana::modules(array(
 	 'database'   => MODPATH.'database',   // Database access
 	// 'image'      => MODPATH.'image',      // Image manipulation
 	// 'minion'     => MODPATH.'minion',     // CLI Tasks
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+	 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+
 	));
 
 /**
@@ -145,6 +146,7 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+
 Route::set('about', 'about')
     ->defaults(array(
         'controller' => 'static',
@@ -173,10 +175,10 @@ Route::set('comments', 'comments/<id>', array('id' => '.+'))
         'action'     => 'index',
     ));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
-		'controller' => 'page',
-		'action'     => 'index',
-	));
+    ->defaults(array(
+        'controller' => 'page',
+        'action'     => 'index',
+    ));
 /*
  * Кеширование урлов
  */

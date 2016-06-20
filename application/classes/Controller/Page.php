@@ -3,7 +3,13 @@
 class Controller_Page extends Controller_Common {
     public function action_index()
     {
-        $content = View::factory('/pages/show');
-        $this->template->content = $content;
+        $articles = array();
+
+        $content = View::factory('/pages/show')
+            ->bind('articles', $articles);
+
+        $articles = ORM::factory('Article');
+
+//        $this->template->content = $content;
     }
 }

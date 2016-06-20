@@ -30,7 +30,9 @@
 
         <div class="clearing"></div>
         <div class="footer">2011 Все права защищены</div>
+
     </div>
 </div>
+<?php ProfilerToolbar::render(true); ?>
 </body>
 </html>
