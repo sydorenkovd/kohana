@@ -4,7 +4,11 @@ class Controller_Welcome extends Controller {
 
 	public function action_index()
 	{
-        $this->response->body(View::factory('welcome'));
+        $data = [
+          'name' => 'Viktor',
+            'age' => 22
+        ];
+        $this->response->body(View::factory('welcome', $data));
     }
 
     public function action_my(){
