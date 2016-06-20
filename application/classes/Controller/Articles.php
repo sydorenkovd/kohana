@@ -4,17 +4,23 @@ class Controller_Articles extends Controller_Common {
 
 public function action_index()
 {
-$id = $this->request->param('id');
+    $id = $this->request->param('id');
 
-if($id)
-{
-$content = View::factory('/pages/article');
-$content->article = $id;
-}
-else
-$content = View::factory('/pages/articles');
+    if($id)
+    {
+        $content = View::factory('/pages/article')
+            ->set('article', $id)
+            ->bind('comments', $comments);
 
-$this->template->content = $content;
+        $comments_url = 'comments/' . $id;
+        $comments = Request::factory($comments_url)->execute();
+    }
+    else
+    {
+        $content = View::factory('/pages/articles');
+    }
+
+    $this->template->content = $content;
 }
 
 }

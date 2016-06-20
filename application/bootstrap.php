@@ -167,6 +167,11 @@ Route::set('admin', 'admin(/<controller>(/<action>(/<id>)))')
         'controller' => 'main',
         'action'     => 'index',
     ));
+Route::set('comments', 'comments/<id>', array('id' => '.+'))
+    ->defaults(array(
+        'controller' => 'comments',
+        'action'     => 'index',
+    ));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'page',
