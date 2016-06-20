@@ -145,6 +145,17 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+Route::set('about', 'about')
+    ->defaults(array(
+        'controller' => 'static',
+        'action'     => 'about',
+    ));
+
+Route::set('contacts', 'contacts')
+    ->defaults(array(
+        'controller' => 'static',
+        'action'     => 'contacts',
+    ));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'page',

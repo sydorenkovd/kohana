@@ -12,6 +12,7 @@ abstract class Controller_Common extends Controller_Template {
         $this->template->content = '';
         $this->template->styles = '';
         $this->template->scripts = '';
+        $this->template->styles = ['main'];
     }
 
 }
