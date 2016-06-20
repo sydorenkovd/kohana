@@ -156,6 +156,11 @@ Route::set('contacts', 'contacts')
         'controller' => 'static',
         'action'     => 'contacts',
     ));
+Route::set('articles', 'articles(/<id>)', array('id' => '.+'))
+    ->defaults(array(
+        'controller' => 'articles',
+        'action'     => 'index',
+    ));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'page',

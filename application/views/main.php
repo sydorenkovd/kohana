@@ -22,8 +22,8 @@
             <br />
             <ul>
                 <li><a href="<?php echo URL::site(); ?>">Главная</a></li>
-                <li><a href="<?php echo URL::site('page/about'); ?>">О сайте</a></li>
-                <li><a href="<?php echo URL::site('page/contacts'); ?>">Мои контакты</a></li>
+                <li><a href="<?php echo URL::site('/about'); ?>">О сайте</a></li>
+                <li><a href="<?php echo URL::site('/contacts'); ?>">Мои контакты</a></li>
             </ul>
         </div>
         <div class="content"><?php echo $content; ?></div>
