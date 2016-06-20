@@ -1,10 +1,11 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Page extends Controller_Template {
-
-    // Определяем шаблон по умолчанию
-    public $template = 'main';
-
+class Controller_Page extends Controller_Common {
+    public function action_index()
+    {
+        $content = View::factory('/pages/show');
+        $this->template->content = $content;
+    }
     public function action_about()
     {
         $content = View::factory('/pages/about');

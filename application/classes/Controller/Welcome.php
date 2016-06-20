@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Welcome extends Controller_Template {
-public $template = 'main';
+class Controller_Welcome extends Controller_Common {
+
 	public function action_index()
 	{
         $content = View::factory('welcome');
