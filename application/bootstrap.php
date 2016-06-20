@@ -161,8 +161,22 @@ Route::set('articles', 'articles(/<id>)', array('id' => '.+'))
         'controller' => 'articles',
         'action'     => 'index',
     ));
+Route::set('admin', 'admin(/<controller>(/<action>(/<id>)))')
+    ->defaults(array(
+        'directory'  => 'admin',
+        'controller' => 'main',
+        'action'     => 'index',
+    ));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'page',
 		'action'     => 'index',
 	));
+/*
+ * Кеширование урлов
+ */
+/*if ( ! Route::cache())
+     {
+             // Set routes here
+             Route::cache(TRUE);
+         }*/
