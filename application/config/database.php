@@ -4,7 +4,7 @@ return array
 (
 	'default' => array
 	(
-		'type'       => 'MySQL',
+		'type'       => 'MySQLi',
 		'connection' => array(
 			/**
 			 * The following options are available for MySQL:
@@ -18,7 +18,7 @@ return array
 			 *
 			 * Ports and sockets may be appended to the hostname.
 			 */
-			'hostname'   => 'localhost',
+			'hostname'   => '127.0.0.1',
 			'database'   => 'kohana',
 			'username'   => 'root',
 			'password'   => 'root',

@@ -33,6 +33,5 @@
 
     </div>
 </div>
-<?php ProfilerToolbar::render(true); ?>
 </body>
 </html>
