@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="599e6e5a-8a1e-496d-a225-1515671bcc69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/Model/author.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Controller/Page.php" afterPath="$PROJECT_DIR$/application/classes/Controller/Page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main.php" afterPath="$PROJECT_DIR$/application/views/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/show.php" afterPath="$PROJECT_DIR$/application/views/pages/show.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Model/article.php" afterPath="$PROJECT_DIR$/application/classes/Model/article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Model/author.php" afterPath="$PROJECT_DIR$/application/classes/Model/author.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kohana.loc.iws" />
@@ -62,8 +60,8 @@
       <file leaf-file-name="Page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/Page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5392321">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.8013356">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -71,6 +69,16 @@
       </file>
       <file leaf-file-name="author.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/Model/author.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/Model/article.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-7.8461537">
               <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
@@ -88,16 +96,6 @@
                 <element signature="e#91#162#0#HTML" expanded="true" />
                 <element signature="e#421#473#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/Model/article.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -125,13 +123,13 @@
         <option value="$PROJECT_DIR$/application/views/pages/article.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Comments.php" />
         <option value="$PROJECT_DIR$/application/views/comments/show.php" />
-        <option value="$PROJECT_DIR$/application/classes/Model/article.php" />
         <option value="$PROJECT_DIR$/modules/database/config/database.php" />
         <option value="$PROJECT_DIR$/application/bootstrap.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/views/main.php" />
         <option value="$PROJECT_DIR$/application/views/pages/show.php" />
         <option value="$PROJECT_DIR$/application/classes/Model/author.php" />
+        <option value="$PROJECT_DIR$/application/classes/Model/article.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Page.php" />
       </list>
     </option>
@@ -598,7 +596,13 @@
       <option name="project" value="LOCAL" />
       <updated>1466452497524</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="has many">
+      <created>1466622522173</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1466622522173</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -607,6 +611,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="584" />
@@ -616,7 +621,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -650,7 +654,8 @@
     <MESSAGE value="comments" />
     <MESSAGE value="database work" />
     <MESSAGE value="orm" />
-    <option name="LAST_COMMIT_MESSAGE" value="orm" />
+    <MESSAGE value="has many" />
+    <option name="LAST_COMMIT_MESSAGE" value="has many" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -926,14 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/classes/Kohana/Kohana/Exception.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="42.5">
-          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/show.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -945,22 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/Model/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/Model/author.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
@@ -969,10 +950,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/system/classes/Kohana/Kohana/Exception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="42.5">
+          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/Model/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/Model/author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/Page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5392321">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.8013356">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding />
         </state>
       </provider>

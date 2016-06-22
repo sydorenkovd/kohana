@@ -7,7 +7,7 @@ class Model_Author extends ORM
     protected $_has_many = array(
         'articles'    => array(
             'model'       => 'article',
-            'foreign_key' => 'author_id',
+            'through' => 'article_author',
         )
     );
 };

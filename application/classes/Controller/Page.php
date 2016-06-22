@@ -17,11 +17,20 @@ class Controller_Page extends Controller_Common {
 //        $article->save();
 //        $this->template->content = $content;
 
-        $author = ORM::factory('author', 2);
+        /*$author = ORM::factory('author', 2);
         $books = $author->articles->find_all();
         foreach($books as $book)
         {
             echo $book->id .' - '. $book->title .'<br />';
-        }
+        }*/
+//        $author = ORM::factory('author', 2);
+//
+//        $articles = $author->article->find_all();
+//
+//        foreach($articles as $article)
+//        {
+//            echo $author->name .' - '. $article->title .'<br />';
+//        }
+
     }
 }

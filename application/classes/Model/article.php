@@ -4,9 +4,10 @@ class Model_Article extends ORM
 {
     protected $_tableArticles = 'articles';
 
-    /**
-     * Get all articles
-     * @return array
-     */
-
-}
+    protected $_has_many = array(
+        'authors'    => array(
+            'model'       => 'author',
+            'through' => 'article_author',
+        )
+    );
+};
