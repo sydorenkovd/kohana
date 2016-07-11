@@ -147,7 +147,7 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
-Route::set('about', 'about')
+Route::set('about', 'about(/<name>)', ['name' => '.+'])
     ->defaults(array(
         'controller' => 'static',
         'action'     => 'about',
@@ -173,6 +173,12 @@ Route::set('comments', 'comments/<id>', array('id' => '.+'))
     ->defaults(array(
         'controller' => 'comments',
         'action'     => 'index',
+    ));
+
+Route::set('test', 'test')
+    ->defaults(array(
+        'controller' => 'page',
+        'action'     => 'test',
     ));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
     ->defaults(array(

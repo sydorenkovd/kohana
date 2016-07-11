@@ -3,6 +3,7 @@
 class Controller_Page extends Controller_Common {
     public function action_index()
     {
+  $this->response->body('we are here');
 //        $articles = array();
 //
 //        $content = View::factory('/pages/show')
@@ -32,5 +33,8 @@ class Controller_Page extends Controller_Common {
 //            echo $author->name .' - '. $article->title .'<br />';
 //        }
 
+    }
+    public function action_test(){
+        $this->response->body('test');
     }
 }
