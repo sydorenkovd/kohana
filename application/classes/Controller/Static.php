@@ -6,10 +6,11 @@ public $template = 'main';
 
     public function action_about()
     {
-        $name = $this->request->param('name');
-        $content = $this->response->body('here');
-        $content .= $name;
-        $this->template->name = $name;
+       $arr['name'] = $this->request->param('name');
+       $arr['point'] = $this->request->param('point');
+$arrs = Arr::extract($arr, ['name', 'point']);
+        $content = $arrs;
+        $this->template->name = '';
         $this->template->age = 22;
         $this->template->content = $content;
     }

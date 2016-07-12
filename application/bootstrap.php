@@ -147,7 +147,7 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
-Route::set('about', 'about(/<name>)', ['name' => '.+'])
+Route::set('about', 'about(/<name>(/<point>))')
     ->defaults(array(
         'controller' => 'static',
         'action'     => 'about',

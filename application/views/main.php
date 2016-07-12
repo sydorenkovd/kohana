@@ -26,7 +26,7 @@
                 <li><a href="<?php echo URL::site('/contacts'); ?>">Мои контакты</a></li>
             </ul>
         </div>
-        <div class="content"><?php echo $content; ?></div>
+        <div class="content"><?php print_r($content); ?></div>
 
         <div class="clearing"></div>
         <div class="footer">2011 Все права защищены</div>
