@@ -1,12 +1,17 @@
 <?php defined('SYSPATH') or die('No direct script access.');
+/*
+ * Главная страница
+ */
+class Controller_Admin_Main extends Controller_Admin {
 
-class Controller_Admin_Main extends Controller_Common {
+    public function action_index() {
+        $adminstat = Widget::load('adminstat');
+        $content = View::factory('admin/main/v_main_index', array(
+            'adminstat' => $adminstat,
+        ));
 
-    // Главная страница
-    public function action_index()
-    {
-        $content = View::factory('/admin/show');
-        $this->template->content = $content;
+        // Вывод в шаблон
+        $this->template->page_title = 'Главная';
+        $this->template->block_center = array($content);
     }
-
 }
