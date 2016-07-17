@@ -11,7 +11,7 @@ class Controller_Index_Page extends Controller_Index {
         $page = ORM::factory('page')->where('alias', '=', $page_alias)->find();
 
         if(!$page->loaded() || $page->status == 0) {
-            $this->request->redirect();
+            $this->redirect();
         }
 
         $content = View::factory('index/page/v_page_index', array(
@@ -27,21 +27,25 @@ class Controller_Index_Page extends Controller_Index {
     // Контакты
     public function action_contacts() {
 
-        if (isset($_POST['send'])) {
-            $data = Arr::extract($_POST, array('name', 'email','text'));
-            $admin_email = Kohana::config('settings.admin_email');
-            $site_name= Kohana::config('settings.site_name');
+//        if (isset($_POST['send'])) {
+//            $data = Arr::extract($_POST, array('name', 'email','text'));
+//            $admin_email = Kohana::config('settings.admin_email');
+//            $site_name= Kohana::config('settings.site_name');
 
-            $data['text'] = View::factory('index/page/v_page_contacts');
+//            $data['text'] = View::factory('index/page/v_page_contacts');
 
-            $email = Email::factory('Контакты', $data['text'])
-                ->to($data['email'], $data['name'])
-                ->from($admin_email, $site_name)
-                ->send();
+//            $email = Email::factory('Контакты', $data['text'])
+//                ->to($data['email'], $data['name'])
+//                ->from($admin_email, $site_name)
+//                ->send();
+//        }
+
+
+$content = $this->cache->get('v_page_contacts');
+        if($content == NULL){
+                    $content = View::factory('index/page/v_page_contacts');
+            $this->cache->set('v_page_contacts', $content->render());
         }
-
-        $content = View::factory('index/page/v_page_contacts');
-
         // Выводим в шаблон
         $this->template->title = 'Контакты';
         $this->template->page_title = 'Контакты';

@@ -13,13 +13,13 @@ class Controller_Base extends Controller_Template {
         parent::before();
 
         I18n::lang('ru');
-        $settings = Kohana::config('settings');
+        $settings = Kohana::$config->load('settings');
         Cookie::$salt = 'asd12d2';
         Session::$default = 'cookie';
         
         $this->cache = Cache::instance('file');
         $this->auth = Auth::instance();
-        $this->user = $this->auth->get_user();
+        $this->user = Auth::instance()->get_user();
         $this->session = Session::instance();
 
         // Вывод в шаблон

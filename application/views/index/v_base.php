@@ -70,4 +70,5 @@
     </tbody>
 </table>
 </center>
+<?= View::factory('profiler/stats'); ?>
 </body>

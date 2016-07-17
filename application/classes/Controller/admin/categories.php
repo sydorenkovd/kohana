@@ -32,7 +32,7 @@ class Controller_Admin_Categories extends Controller_Admin {
                     $categories->insert_as_last_child($cat);
                 }
 
-                $this->request->redirect('admin/categories');
+                $this->redirect('admin/categories');
             }
             catch (ORM_Validation_Exception $e)
             {
@@ -47,7 +47,7 @@ class Controller_Admin_Categories extends Controller_Admin {
                 ORM::factory('category', $cat)->delete();
             }
 
-            $this->request->redirect('admin/categories');
+            $this->redirect('admin/categories');
         }
 
         $categories = $categories->fulltree()->as_array();
@@ -59,6 +59,11 @@ class Controller_Admin_Categories extends Controller_Admin {
         // Вывод в шаблон
         $this->template->page_title = 'Категории';
         $this->template->block_center = array($content);
+    }
+    public function action_test(){
+        $cat = ORM::factory('category');
+        $cat->title = 'Under category';
+        $cat->insert_as_last_child(42);
     }
     
 }

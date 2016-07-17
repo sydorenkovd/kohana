@@ -85,6 +85,7 @@ Kohana::init(array(
         'index_file' => false
 ));
 
+Cookie::$salt = 'foobar';
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
@@ -109,7 +110,7 @@ Kohana::modules(array(
 	 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
         'pagination'    => MODPATH.'pagination',
         'orm-mptt'    => MODPATH.'orm-mptt',
-        'email'    => MODPATH.'email',
+//        'email'    => MODPATH.'email',
 	));
 
 /**

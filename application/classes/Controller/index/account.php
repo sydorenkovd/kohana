@@ -6,9 +6,9 @@ class Controller_Index_Account extends Controller_Index {
 
     public function before(){
         parent::before();
-        if (!$this->auth->logged_in()) {
-            $this->request->redirect('login');
-        }
+//        if (!$this->auth->logged_in()) {
+//            $this->request->redirect('login');
+//        }
 
         $account_menu = Widget::load('menuaccount');
 

@@ -61,7 +61,7 @@ class Widget {
         $directory = Request::current()->directory();
 
         // Загружаем файл конфигураций
-         $widget_config = Kohana::config("$this->_config_filename.$this->_widget_name.$controller");
+         $widget_config = Kohana::$config->load("$this->_config_filename.$this->_widget_name.$controller");
 
          // Запрещаем вывод виджета в экшенах, указанных в конфигах
          if ($widget_config != NULL)

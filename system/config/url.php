@@ -3,6 +3,7 @@
 return array(
 
 	'trusted_hosts' => array(
+        'kohana.loc'
 		// Set up your hostnames here
 		//
 		// Example:

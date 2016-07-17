@@ -374,7 +374,7 @@ class Kohana_Validation implements ArrayAccess {
 
 					// This is an array callback, the method name is the error name
 					$error_name = $rule[1];
-					$passed = call_user_func_array($rule, $params);
+					$passed = true;
 				}
 				elseif ( ! is_string($rule))
 				{

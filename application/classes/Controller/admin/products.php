@@ -17,10 +17,18 @@ class Controller_Admin_Products extends Controller_Admin {
 
     public function action_index() {
 
-        $products = ORM::factory('product')->find_all();
 
+        $count = ORM::factory('product')->count_all();
+        $pagination = Pagination::factory(array(
+            'total_items' => $count,
+        ));
+        $products = ORM::factory('product')
+            ->limit($pagination->items_per_page)
+            ->offset($pagination->offset)
+            ->find_all();
         $content = View::factory('admin/products/v_products_index', array(
             'products' => $products,
+            'pagination' => $pagination
         ));
 
         // Вывод в шаблон
@@ -71,7 +79,7 @@ class Controller_Admin_Products extends Controller_Admin {
                     }
                 }
 
-                $this->request->redirect('admin/products/edit/' . $products->pk());
+                $this->redirect('admin/products/edit/' . $products->pk());
             }
             catch (ORM_Validation_Exception $e) {
                 $errors = $e->errors('validation');

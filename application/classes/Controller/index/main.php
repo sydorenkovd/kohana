@@ -15,5 +15,10 @@ class Controller_Index_Main extends Controller_Index {
         $this->template->page_title = 'О магазине';
         $this->template->block_center = array($block_center, $search , $topproducts);
     }
+    public function action_test(){
+        $var1 = ['one', 'two'];
+        $var2 = ['three', 'four'];
+        echo Debug::vars($var1, $var2);
+    }
 
 }

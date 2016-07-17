@@ -4,8 +4,8 @@ return array(
 	'default' => array(
 		'current_page'      => array('source' => 'route', 'key' => 'page'),
 		'total_items'       => 0,
-		'items_per_page'    => 10,
-		'view'              => 'pagination/basic',
+		'items_per_page'    => 1,
+		'view'              => 'pagination/floating',
 		'auto_hide'         => FALSE,
 		'first_page_in_url' => FALSE,
 	),

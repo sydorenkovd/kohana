@@ -8,9 +8,9 @@ class Controller_Admin extends Controller_Base {
 
     public function  before() {
         parent::before();
-        if (!$this->auth->logged_in('admin')) {
-            $this->request->redirect('login');
-        }
+//        if (!$this->auth->logged_in('admin')) {
+//            $this->request->redirect('login');
+//        }
 
         $menu_admin = Widget::load('menuadmin');
 

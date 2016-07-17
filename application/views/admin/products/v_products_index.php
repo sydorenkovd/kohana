@@ -26,3 +26,4 @@
 
 <?=HTML::anchor('admin/products/add', 'Добавить')?>
 </p>
+<?=$pagination?>

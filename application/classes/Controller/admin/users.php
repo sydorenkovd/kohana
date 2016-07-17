@@ -38,11 +38,11 @@ class Controller_Admin_Users extends Controller_Admin {
         $users = ORM::factory('user', $id);
 
         if(!$users->loaded()){
-            $this->request->redirect('admin/users');
+            $this->redirect('admin/users');
         }
 
         $users->delete();
-        $this->request->redirect('admin/users');
+        $this->redirect('admin/users');
     }
 
     public function action_edit() {

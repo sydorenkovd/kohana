@@ -35,11 +35,15 @@ class Bench_AutoLinkEmails extends Codebench {
 
 	// The "e" stands for "eval", hmm... Ugly and slow because it needs to reinterpret the PHP code upon each match.
 	public function bench_replace_e($subject)
-	{
-		return preg_replace(
-			'~\b(?<!href="mailto:|">|58;)(?!\.)[-+_a-z0-9.]++(?<!\.)@(?![-.])[-a-z0-9.]+(?<!\.)\.[a-z]{2,6}\b~ie',
-			'HTML::mailto("$0")', // Yuck!
-			$subject
+	{ $count = 100;
+		return preg_replace_callback('~\b(?<!href="mailto:|">|58;)(?!\.)[-+_a-z0-9.]++(?<!\.)@(?![-.])[-a-z0-9.]+(?<!\.)\.[a-z]{2,6}\b~ie',
+            'HTML::mailto("$0")',
+            function(){
+                return true; // Yuck!
+            },
+
+			$subject,
+           $count
 		);
 	}
 

@@ -79,7 +79,7 @@ class Controller_Index_Cart extends Controller_Index {
         }
 
         $this->session->set('products', $products_s);
-        $this->request->redirect('cart');
+        $this->redirect('cart');
     }
 
 
@@ -87,7 +87,7 @@ class Controller_Index_Cart extends Controller_Index {
     {
         if (!$this->auth->logged_in())
         {
-            $this->request->redirect('login');
+            $this->redirect('login');
         }
 
         $delivery = ORM::factory('delivery')->find_all();
@@ -107,7 +107,7 @@ class Controller_Index_Cart extends Controller_Index {
     {
         if (!$this->auth->logged_in())
         {
-            $this->request->redirect('login');
+            $this->redirect('login');
         }
 
         $delivery_id = Arr::get($_POST, 'delivery');
@@ -115,7 +115,7 @@ class Controller_Index_Cart extends Controller_Index {
 
         if ($delivery_id == NULL)
         {
-            $this->request->redirect('cart/order');
+            $this->redirect('cart/order');
         }
 
         // Обновить адрес покупателя

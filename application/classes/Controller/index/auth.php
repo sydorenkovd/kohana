@@ -11,7 +11,7 @@ class Controller_Index_Auth extends Controller_Index {
     public function action_login() {
 
         if(Auth::instance()->logged_in()) {
-            $this->request->redirect('account');
+            $this->redirect('account');
         }
 
         if (isset($_POST['submit'])){
@@ -20,10 +20,10 @@ class Controller_Index_Auth extends Controller_Index {
 
             if ($status){
                 if(Auth::instance()->logged_in('admin')) {
-                    $this->request->redirect('admin');
+                    $this->redirect('admin');
                 }
                 
-                $this->request->redirect('account');
+                $this->redirect('account');
             }
             else {
                 $errors = array(Kohana::message('auth/user', 'no_user'));
@@ -47,7 +47,7 @@ class Controller_Index_Auth extends Controller_Index {
             $users = ORM::factory('user');
 
             try {
-                $users->create_user($_POST, array(
+                $users->create_user( $this->request->post(), array(
                     'username',
                     'first_name',
                     'password',
@@ -57,7 +57,7 @@ class Controller_Index_Auth extends Controller_Index {
                 $role = ORM::factory('role')->where('name', '=', 'login')->find();
                 $users->add('roles', $role);
                 $this->action_login();
-                $this->request->redirect('account');
+                $this->redirect('account');
             }
             catch (ORM_Validation_Exception $e) {
                 $errors = $e->errors('auth');
@@ -76,7 +76,7 @@ class Controller_Index_Auth extends Controller_Index {
     
     public function action_logout() {
         if(Auth::instance()->logout()) {
-            $this->request->redirect();
+            $this->redirect();
         }
     }
 

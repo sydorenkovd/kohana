@@ -1,0 +1,20 @@
+3600
+s:713:"<br/>
+<form action="/page/contacts" method="post" accept-charset="utf-8"><table width="100%" border="0">
+    <tr>
+        <td><label for="name">Ваше Имя</label>:</td>
+        <td><input type="text" name="name" size="30" /></td>
+    </tr>
+    <tr>
+        <td><label for="email">Ваш E-mail</label>:</td>
+        <td><input type="text" name="email" size="30" /></td>
+    </tr>
+     <tr>
+         <td valign="top"><label for="text">Сообщение</label>:</td>
+        <td><textarea name="text" cols="50" rows="10"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><input type="submit" name="send" value="Отправить" /></td>
+    </tr>
+</table>
+</form>";
