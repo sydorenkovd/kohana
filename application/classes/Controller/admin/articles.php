@@ -11,8 +11,12 @@ class Controller_Admin_Articles extends Controller_Admin {
     }
 
     public function action_index() {
-
-        $content = View::factory('admin/articles/v_articles_index');
+        $test = 217;
+        $id = 20;
+        $content = View::factory('admin/articles/v_articles_index', [
+            'id' => $id,
+            'test' => $test
+        ]);
 
         // Вывод в шаблон
         $this->template->block_center = array($content);

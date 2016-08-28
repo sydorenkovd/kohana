@@ -2,6 +2,7 @@
 
 class Model_New extends ORM {
 
+    protected $_table_name = 'news';
    public function rules()
     {
         return array(

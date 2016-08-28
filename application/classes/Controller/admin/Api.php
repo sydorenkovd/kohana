@@ -21,6 +21,7 @@ class Controller_Admin_Api extends Controller_Admin
     public function before()
     {
         parent::before();
+
         $this->response->headers(
             [
                 'Access-Control-Allow-Origin' => $this->_thisUrlHost,
@@ -45,10 +46,21 @@ class Controller_Admin_Api extends Controller_Admin
         $this->template->block_center = array($content);
     }
     public function action_test() {
-
+        $param = $this->request->param('param');
+        $param2 = $this->request->param('paramsecond');
+        $title = $this->request->param('title');
+        $news = ORM::factory('New')->where('id', '=', $param)->find_all();
+        $n = [];
+        foreach ($news as $new) {
+            $n['title'] = $new->title;
+        }
         $this->ajax_answer_status_ok = true;
         $this->ajax_answer = [
-            'name' => 'Victor'
+            'news' => $n,
+            'name' => 'Victor',
+            'param' => $param,
+            'title' => $title,
+            'paramsecond' => $param2
         ];
     }
 
