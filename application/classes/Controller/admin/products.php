@@ -16,8 +16,6 @@ class Controller_Admin_Products extends Controller_Admin {
     }
 
     public function action_index() {
-
-
         $count = ORM::factory('product')->count_all();
         $pagination = Pagination::factory(array(
             'total_items' => $count,

@@ -11,11 +11,17 @@ class Controller_Admin_Articles extends Controller_Admin {
     }
 
     public function action_index() {
-        
+
         $content = View::factory('admin/articles/v_articles_index');
 
         // Вывод в шаблон
         $this->template->block_center = array($content);
+    }
+    public function action_test() {
+        $this->ajax_answer_status_ok = true;
+        $this->ajax_answer = [
+            'test'
+        ];
     }
 
 }

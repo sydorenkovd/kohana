@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
     <title><?=$site_name?> | <?=$page_title?></title>
     <meta content="text/html; charset=utf8" http-equiv="content-type">
     
@@ -33,3 +35,4 @@
 </center>
 
 </body>
+<script type="application/javascript" src="../../../public/angularjs/test.js"></script>
