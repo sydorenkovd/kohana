@@ -146,7 +146,7 @@ Route::set('contacts', 'page/contacts')
                 'action' => 'contacts',
 		'controller' => 'page',
 	));
-Route::set('api', 'admin/kohana.loc/admin/api/test(/<param>)(/<title>)(/<paramsecond>)', [
+Route::set('api', 'admin/kohana.loc/admin/api/test(/<page>)(/<title>)(/<paramsecond>)', [
     'param' => '[0-9]{0,2}',
     'title' => '[a-z]+',
     'paramsecond' => '[0-9]{0,3}'

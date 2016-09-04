@@ -49,19 +49,27 @@ class Controller_Admin_Api extends Controller_Admin
         $param = $this->request->param('param');
         $param2 = $this->request->param('paramsecond');
         $title = $this->request->param('title');
-        $news = ORM::factory('New')->where('id', '=', $param)->find_all();
-        $n = [];
-        foreach ($news as $new) {
-            $n['title'] = $new->title;
-        }
+        $limit = 1;
+        $page = $this->request->param('page') ?  $this->request->param('page') : 0;
+        $news = ORM::factory('New')->limit($limit)->offset($page)->find_all();
         $this->ajax_answer_status_ok = true;
-        $this->ajax_answer = [
-            'news' => $n,
-            'name' => 'Victor',
-            'param' => $param,
-            'title' => $title,
-            'paramsecond' => $param2
-        ];
+        $result = [];
+        $isMore = false;
+        foreach($news as $new) {
+            if ($new->title) {
+                $isMore = true;
+            } else {
+                $isMore = false;
+            }
+            $result[] = [
+                'content' => $new->content,
+                'title' => $new->title
+                ];
+        }
+            $this->ajax_answer = [
+                'data' => $result,
+                'is_more' => $isMore
+            ];
     }
 
     /**
