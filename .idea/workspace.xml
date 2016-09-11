@@ -22,8 +22,6 @@
       <change type="DELETED" beforePath="C:\OpenServer\domains\kohana.loc\application\views\pages\contacts.php" afterPath="" />
       <change type="DELETED" beforePath="C:\OpenServer\domains\kohana.loc\application\views\pages\show.php" afterPath="" />
       <change type="DELETED" beforePath="C:\OpenServer\domains\kohana.loc\application\views\welcome.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/articles/v_articles_index.php" afterPath="$PROJECT_DIR$/application/views/admin/articles/v_articles_index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/v_base.php" afterPath="$PROJECT_DIR$/application/views/admin/v_base.php" />
     </list>
     <ignored path="kohana.loc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,8 +106,8 @@
       <file leaf-file-name="v_base.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/v_base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8297162">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.29048413">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -969,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/v_base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8297162">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29048413">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding />
         </state>
       </provider>
