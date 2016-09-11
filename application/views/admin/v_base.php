@@ -2,6 +2,12 @@
 <html>
 <head>
     <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
     <title><?=$site_name?> | <?=$page_title?></title>
     <meta content="text/html; charset=utf8" http-equiv="content-type">
@@ -36,3 +42,8 @@
 
 </body>
 <script type="application/javascript" src="../../../public/angularjs/test.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.parallax').parallax();
+    });
+</script>
