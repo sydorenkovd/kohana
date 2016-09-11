@@ -46,4 +46,9 @@
     $(document).ready(function(){
         $('.parallax').parallax();
     });
+
+    $(document).ready(function(){
+        $('.tabs-wrapper').pushpin({ top: $('.tabs-wrapper').offset().top });
+    });
+
 </script>
